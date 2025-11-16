@@ -1,0 +1,3 @@
+[submodule "AKAvR_IS"]
+	path = AKAvR_IS
+	url = https://github.com/HelpMySoul/AKAvR_IS.git
