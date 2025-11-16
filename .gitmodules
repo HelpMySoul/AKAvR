@@ -1,3 +1,6 @@
 [submodule "AKAvR_IS"]
 	path = AKAvR_IS
 	url = https://github.com/HelpMySoul/AKAvR_IS.git
+[submodule "AKAvR_App"]
+	path = AKAvR_App
+	url = https://github.com/HelpMySoul/AKAvR_App.git
