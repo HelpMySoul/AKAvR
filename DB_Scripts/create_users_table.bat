@@ -1,45 +1,33 @@
 @echo off
-REM run_sql_script.bat
-REM Батовый файл для запуска SQL скрипта в PostgreSQL
+REM create_users_table.bat
+REM Batch file to create Users table
 
-setlocal
+echo ========================================
+echo Creating Users table in AKAvR_DB...
+echo ========================================
 
-REM Настройки подключения к базе данных
-SET PGHOST=localhost
-SET PGPORT=5432
-SET PGDATABASE=AKAvR_DB
-SET PGUSER=postgres
-SET PGPASSWORD=postgres
-
-REM Путь к SQL файлу
 SET SQL_FILE=create_users_table.sql
 
-REM Проверка существования SQL файла
+REM Check if SQL file exists
 if not exist "%SQL_FILE%" (
-    echo Ошибка: Файл %SQL_FILE% не найден!
+    echo ERROR: File %SQL_FILE% not found!
     pause
     exit /b 1
 )
 
-echo ========================================
-echo Запуск SQL скрипта: %SQL_FILE%
-echo База данных: %PGDATABASE%
-echo Хост: %PGHOST%:%PGPORT%
-echo ========================================
+echo Waiting for database to be ready...
+timeout /t 2 /nobreak >nul
 
-REM Запуск SQL скрипта с помощью psql
-psql -h %PGHOST% -p %PGPORT% -d %PGDATABASE% -U %PGUSER% -f "%SQL_FILE%"
+echo Creating table and test data in AKAvR_DB...
+%PSQL_PATH% -h %PGHOST% -p %PGPORT% -d %PGDATABASE% -U %PGUSER% -f "%SQL_FILE%"
 
-REM Проверка результата выполнения
 if %errorlevel% equ 0 (
-    echo ========================================
-    echo SQL скрипт успешно выполнен!
-    echo ========================================
+    echo ✓ Users table created successfully!
 ) else (
-    echo ========================================
-    echo Ошибка при выполнении SQL скрипта!
-    echo ========================================
+    echo ✗ Table creation failed!
+    echo This usually means:
+    echo 1. Database AKAvR_DB was not created in previous step
+    echo 2. Connection issues to PostgreSQL
+    echo 3. Database name is incorrect
+    exit /b 1
 )
-
-pause
-endlocal
