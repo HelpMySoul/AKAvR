@@ -1,0 +1,41 @@
+{
+  "training_date": "2025-12-13T21:54:32.704040",
+  "total_samples": 4800,
+  "test_accuracy": 0.8166666626930237,
+  "test_top1_accuracy": 0.8166666626930237,
+  "test_top3_accuracy": 0.918749988079071,
+  "classes": [
+    "Computer Science",
+    "Data Science",
+    "Design",
+    "Economics",
+    "Linguistics",
+    "Medicine",
+    "Psychology",
+    "Software Engineering"
+  ],
+  "data_characteristics": {
+    "has_noise": true,
+    "noise_percentage": 10,
+    "realistic_variations": true,
+    "overlapping_profiles": true
+  },
+  "model_architecture": {
+    "layers": [
+      "Dense(256)",
+      "Dropout(0.4)",
+      "Dense(128)",
+      "Dropout(0.3)",
+      "Dense(64)",
+      "Dropout(0.2)",
+      "Dense(32)"
+    ],
+    "regularization": "L2(0.001)",
+    "optimizer": "Adam(lr=0.0005)"
+  },
+  "expected_performance": {
+    "accuracy_range": "85-90%",
+    "top3_accuracy_range": "95-98%",
+    "is_realistic": true
+  }
+}
