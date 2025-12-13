@@ -4,3 +4,6 @@
 [submodule "AKAvR_App"]
 	path = AKAvR_App
 	url = https://github.com/HelpMySoul/AKAvR_App.git
+[submodule "career-ai-system"]
+	path = career-ai-system
+	url = https://github.com/4iPiS/career-ai-system.git
