@@ -42,6 +42,17 @@ if %errorlevel% neq 0 (
 )
 
 echo.
+echo Step 3: Creating user files table...
+call create_user_files_table.bat
+
+if %errorlevel% neq 0 (
+    echo.
+    echo ERROR: User files table creation failed!
+    pause
+    exit /b 1
+)
+
+echo.
 echo ========================================
 echo SETUP COMPLETED SUCCESSFULLY!
 echo ========================================
