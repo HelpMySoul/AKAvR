@@ -5,7 +5,7 @@ REM Main batch file to run database and table creation scripts
 setlocal
 
 echo ========================================
-echo AKAvR Project Database Setup
+echo AKAVER Project Database Setup
 echo PostgreSQL 18 
 echo Password: postgres
 echo ========================================

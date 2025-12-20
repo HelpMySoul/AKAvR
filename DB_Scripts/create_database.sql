@@ -1,16 +1,16 @@
 ------------------------------------------
 -- create_database.sql
--- Script to create AKAvR_DB database
+-- Script to create AKAVER_DB database
 ------------------------------------------
 
 -- Create database if it doesn't exist
-CREATE DATABASE "AKAvR_DB";
+CREATE DATABASE "AKAVER_DB";
 
 -- Display success message
-\echo 'Database AKAvR_DB created successfully!'
+\echo 'Database AKAVER_DB created successfully!'
 
 -- Show all databases to verify
 SELECT datname as "Database Name" 
 FROM pg_database 
-WHERE datname IN ('postgres', 'AKAvR_DB')
+WHERE datname IN ('postgres', 'AKAVER_DB')
 ORDER BY datname;

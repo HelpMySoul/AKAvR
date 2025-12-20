@@ -1,9 +1,9 @@
 @echo off
 REM create_database.bat
-REM Batch file to create AKAvR_DB database
+REM Batch file to create AKAVER_DB database
 
 echo ========================================
-echo Creating AKAvR_DB database...
+echo Creating AKAVER_DB database...
 echo ========================================
 
 SET SQL_FILE=create_database.sql
@@ -19,7 +19,7 @@ echo Creating database in PostgreSQL...
 %PSQL_PATH% -h %PGHOST% -p %PGPORT% -U %PGUSER% -d postgres -f "%SQL_FILE%"
 
 if %errorlevel% equ 0 (
-    echo Database AKAvR_DB created successfully!
+    echo Database AKAVER_DB created successfully!
 ) else (
     echo Database creation failed!
     exit /b 1
