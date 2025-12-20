@@ -1,15 +1,9 @@
-[submodule "AKAvR_IS"]
-	path = AKAvR_IS
-	url = https://github.com/HelpMySoul/AKAvR_IS.git
-[submodule "AKAvR_App"]
-	path = AKAvR_App
-	url = https://github.com/HelpMySoul/AKAvR_App.git
+[submodule "AKAVER_Server"]
+	path = AKAVER_Server
+	url = https://github.com/HelpMySoul/AKAVER_Server.git
 [submodule "career-ai-system"]
 	path = career-ai-system
 	url = https://github.com/4iPiS/career-ai-system.git
-[submodule "a"]
-	path = a
-	url = https://github.com/AkiraFudzii/a
 [submodule "interface"]
 	path = interface
 	url = https://github.com/AkiraFudzii/interface
