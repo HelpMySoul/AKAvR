@@ -1,9 +1,9 @@
-[submodule "AKAVER_Server"]
-	path = AKAVER_Server
-	url = https://github.com/HelpMySoul/AKAVER_Server.git
 [submodule "career-ai-system"]
 	path = career-ai-system
 	url = https://github.com/4iPiS/career-ai-system.git
 [submodule "interface"]
 	path = interface
 	url = https://github.com/AkiraFudzii/interface
+[submodule "AKAVER_Server"]
+	path = AKAVER_Server
+	url = https://github.com/HelpMySoul/AKAVER_Server.git
